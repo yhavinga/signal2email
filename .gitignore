@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+venv/
+.venv/
+
+# PyCharm and IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Signal CLI data
+signal-cli-config/
+
+# Logs
+*.log
+logs/
+
+# Configuration files
+config.ini
+config.json
+*.conf
+
+# Docker
+.env
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Environment variables file
+.env
