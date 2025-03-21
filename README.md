@@ -111,7 +111,7 @@ echo "Test email body" | msmtp --from=signal@local your-email@example.com
 ### 2. Clone this repository
 
 ```bash
-git clone https://github.com/yourusername/signal2mail.git
+git clone https://github.com/yhavinga/signal2mail.git
 cd signal2mail
 ```
 
