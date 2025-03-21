@@ -157,7 +157,7 @@ This will return a page with a QR code. You need to scan this QR code with your 
 
 ### 3. Update the SignalEmailBridge configuration
 
-In `receive_and_email.py`, update the configuration parameters at the bottom:
+In `signal_email_bridge.py`, update the configuration parameters at the bottom:
 
 ```python
 bridge = SignalEmailBridge(
@@ -173,7 +173,7 @@ bridge = SignalEmailBridge(
 Start the application:
 
 ```bash
-python receive_and_email.py
+python signal_email_bridge.py
 ```
 
 ## Troubleshooting
