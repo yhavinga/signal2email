@@ -13,11 +13,13 @@ graph LR
     C --> D[msmtp]
     D --> E[Email Inbox]
     
-    style A fill:#AB7F1F,stroke:#333,stroke-width:2px
-    style B fill:#31363D,stroke:#333,stroke-width:2px
-    style C fill:#343F5A,stroke:#333,stroke-width:2px
-    style D fill:#AB7F1F,stroke:#333,stroke-width:2px
-    style E fill:#69252B,stroke:#333,stroke-width:2px
+    classDef default fill:#343F5A,stroke:#333,stroke-width:2px,color:white;
+    
+    style A fill:#AB7F1F
+    style B fill:#31363D
+    style C fill:#343F5A
+    style D fill:#AB7F1F
+    style E fill:#69252B
 ```
 
 ## Current Features (Proof of Concept)
