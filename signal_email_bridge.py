@@ -10,7 +10,22 @@ from email.mime.image import MIMEImage
 from datetime import datetime
 
 class SignalEmailBridge:
+    """Bridge for forwarding Signal messages to email.
+    
+    This class connects to a Signal REST API, monitors for incoming messages,
+    and forwards them to a specified email address including any attachments.
+    It handles downloading attachments, formatting email content, and sending
+    via msmtp.
+    """
     def __init__(self, api_url: str, phone_number: str, email_to: str, email_from: str):
+        """Initialize the Signal to Email bridge.
+        
+        Args:
+            api_url: URL of the Signal REST API endpoint
+            phone_number: Signal phone number to monitor for messages
+            email_to: Destination email address for forwarded messages
+            email_from: Sender email address to use in forwarded messages
+        """
         self.api_url = api_url.rstrip('/')
         self.phone_number = phone_number
         self.email_to = email_to
