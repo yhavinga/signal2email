@@ -64,6 +64,8 @@ For organizational deployment, the following infrastructure is needed:
 
 ## Installation (of this Proof of Concept)
 
+This project uses [signal-cli-rest-api](https://github.com/bbernhard/signal-cli-rest-api) as its backend interface to the Signal network. The setup primarily involves configuring this interface with your Signal account.
+
 ### Prerequisites
 
 - Linux machine
@@ -127,24 +129,26 @@ pip install requests
 
 ### 1. Start the Signal CLI REST API
 
+The following command starts the signal-cli-rest-api container which provides the REST interface to the Signal network:
+
 ```bash
 docker-compose up
 ```
 
 ### 2. Link your Signal account
 
-First, register a new device:
+Open your web browser and navigate to:
 
-```bash
-curl -X POST "http://localhost:8080/v1/qrcodelink?device_name=signal2mail"
+```
+http://localhost:8080/v1/qrcodelink?device_name=signal2mail
 ```
 
-This will return a JSON response with a QR code. You need to scan this QR code with your primary Signal device:
+This will return a page with a QR code. You need to scan this QR code with your primary Signal device:
 
 1. Open Signal on your phone
 2. Go to Settings → Linked Devices
 3. Tap the "+" button to add a new device
-4. Scan the QR code displayed in your terminal
+4. Scan the QR code displayed in your browser
 
 ### 3. Update the SignalEmailBridge configuration
 
