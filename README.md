@@ -9,8 +9,12 @@ Signal2Mail was developed as a short sprint to validate the feasibility of Signa
 ```mermaid
 graph LR
     A[Signal Network] --> B[signal-cli-rest-api Container]
-    B --> C[SignalEmailBridge]
-    C --> D[msmtp]
+    
+    subgraph Signal2Mail["Signal2Mail"]
+        B --> C[SignalEmailBridge]
+        C --> D[msmtp]
+    end
+    
     D --> E[Email Inbox]
     
     classDef default fill:#343F5A,stroke:#333,stroke-width:2px,color:white;
@@ -20,6 +24,7 @@ graph LR
     style C fill:#343F5A
     style D fill:#AB7F1F
     style E fill:#69252B
+    style Signal2Mail fill:none,stroke:#4CAF50,stroke-width:3px,color:#333
 ```
 
 ## Current Features (Proof of Concept)
